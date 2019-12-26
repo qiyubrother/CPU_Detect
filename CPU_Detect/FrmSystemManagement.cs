@@ -86,5 +86,10 @@ namespace CPU_Detect
             g.FillRectangle(mybrush,0,panel3.Height*(1- mheight * 1.0f / 100),26, panel3.Height * (mheight * 1.0f / 100));
             panel3.BackgroundImage = image;
         }
+
+        private void chkTopMost_CheckedChanged(object sender, EventArgs e)
+        {
+            this.TopMost = chkTopMost.Checked;
+        }
     }
 }

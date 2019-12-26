@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.chkTopMost = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -98,7 +99,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(103, 7);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(321, 100);
+            this.groupBox2.Size = new System.Drawing.Size(321, 73);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "物理内存(MiB)";
@@ -155,11 +156,23 @@
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // chkTopMost
+            // 
+            this.chkTopMost.AutoSize = true;
+            this.chkTopMost.Location = new System.Drawing.Point(104, 84);
+            this.chkTopMost.Name = "chkTopMost";
+            this.chkTopMost.Size = new System.Drawing.Size(84, 16);
+            this.chkTopMost.TabIndex = 2;
+            this.chkTopMost.Text = "最前端显示";
+            this.chkTopMost.UseVisualStyleBackColor = true;
+            this.chkTopMost.CheckedChanged += new System.EventHandler(this.chkTopMost_CheckedChanged);
+            // 
             // FrmSystemManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(432, 114);
+            this.Controls.Add(this.chkTopMost);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -177,6 +190,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -194,7 +208,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblMuse;
         private System.Windows.Forms.Label lblSum;
-
+        private System.Windows.Forms.CheckBox chkTopMost;
     }
 }
 
